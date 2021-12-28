@@ -12,7 +12,7 @@ local colors = {
   green    = '#98be65',
   orange   = '#FF8800',
   violet   = '#a9a1e1',
-  magenta  = '#218997',
+  finnblue  = '#218997',
   blue     = '#51afef',
   red      = '#ec5f67',
 }
@@ -99,7 +99,7 @@ ins_left {
 ins_left {
   'filename',
   cond = conditions.buffer_not_empty,
-  color = { fg = colors.magenta, gui = 'bold' },
+  color = { fg = colors.finnblue, gui = 'bold' },
 }
 
 ins_left { 'location' }
