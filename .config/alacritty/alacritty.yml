@@ -1,0 +1,81 @@
+colors:
+  primary:
+    background: '#1c1c1c'
+    foreground: '#afafd7'
+  normal:
+    black:   '#2e313d'
+    red:     '#cf8164'
+    green:   '#76a065'
+    yellow:  '#ab924c'
+    blue:    '#8296b0'
+    magenta: '#a18daf'
+    cyan:    '#659ea2'
+    white:   '#b5b4c9'
+  bright:
+    black:   '#5b5f71'
+    red:     '#fe9f7c'
+    green:   '#92c47e'
+    yellow:  '#d2b45f'
+    blue:    '#a0b9d8'
+    magenta: '#c6aed7'
+    cyan:    '#7dc2c7'
+    white:   '#f0ecfe'
+
+background_opacity: 1.0
+
+font:
+  normal:
+    family: UbuntuMono Nerd Font
+    style: Regular
+  bold:
+    family: UbuntuMono Nerd Font
+    style: Bold
+  italic:
+    family: UbuntuMono Nerd Font
+    style: Regular
+
+  # Point size
+  size: 11.0
+
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+
+window:
+  padding:
+    x: 2
+    y: 2
+  decorations: full
+  title: Terminal
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 10000
+
+  # Number of lines the viewport will move for every line scrolled when
+  # scrollback is enabled (history > 0).
+  multiplier: 10
+
+# If `true`, bold text is drawn using the bright color variants.
+# draw_bold_text_with_bright_colors: true
+
+selection:
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
+  save_to_clipboard: true
+
+live_config_reload: true
+
+key_bindings:
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Plus, mods: Control, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+  - { key: N, mods: Control, action: SpawnNewInstance }
+
+working_directory: /home/boole/
