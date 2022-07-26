@@ -51,7 +51,6 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
-  use "akinsho/toggleterm.nvim"
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
@@ -59,12 +58,17 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
 
+  -- ToggleTerm
+  use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
+    require("toggleterm").setup()
+  end}
+
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use "arzg/vim-substrata"
   use "ChristianChiarulli/nvcode-color-schemes.vim"
-  use "romainl/Apprentice"
+  use 'folke/tokyonight.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -83,11 +87,15 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "https://git.sr.ht/~whynothugo/lsp_lines.nvim" -- for LSP Virtual Text lines
+  use "danymat/neogen" -- for comment intellisense
+    
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
 
   -- Syntax Highlighting
+  use 'nvim-treesitter/nvim-treesitter'
   use 'lervag/vimtex'
   use 'uiiaoo/java-syntax.vim'
   use 'bfrg/vim-cpp-modern'

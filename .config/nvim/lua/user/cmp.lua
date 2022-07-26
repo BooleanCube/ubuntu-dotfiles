@@ -8,6 +8,11 @@ if not snip_status_ok then
   return
 end
 
+local neo_status_ok, neogen = pcall(require, "neogen")
+if not neo_status_ok then
+  return
+end
+
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
@@ -45,6 +50,8 @@ local kind_icons = {
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
+-- window.documentation = cmp.config.window.bordered()
+
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -72,6 +79,8 @@ cmp.setup {
         luasnip.expand()
       elseif luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
+      elseif neogen.jumpable() then
+        neogen.jump_next()
       elseif check_backspace() then
         fallback()
       else
@@ -84,6 +93,8 @@ cmp.setup {
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
+      elseif neogen.jumpable(true) then
+        neogen.jump_prev()
       elseif luasnip.jumpable(-1) then
         luasnip.jump(-1)
       else
@@ -119,8 +130,8 @@ cmp.setup {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
   },
-  documentation = {
-    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+  window = {
+    documentation = cmp.config.window.bordered()
   },
   experimental = {
     ghost_text = false,
