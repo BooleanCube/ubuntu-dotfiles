@@ -1,27 +1,61 @@
+# TokyoNight Alacritty Colors
 colors:
+  # Default colors
   primary:
-    background: '#1c1c1c'
-    foreground: '#afafd7'
-  normal:
-    black:   '#2e313d'
-    red:     '#cf8164'
-    green:   '#76a065'
-    yellow:  '#ab924c'
-    blue:    '#8296b0'
-    magenta: '#a18daf'
-    cyan:    '#659ea2'
-    white:   '#b5b4c9'
-  bright:
-    black:   '#5b5f71'
-    red:     '#fe9f7c'
-    green:   '#92c47e'
-    yellow:  '#d2b45f'
-    blue:    '#a0b9d8'
-    magenta: '#c6aed7'
-    cyan:    '#7dc2c7'
-    white:   '#f0ecfe'
+    background: '0x1a1b26'
+    foreground: '0xc0caf5'
 
-background_opacity: 1.0
+  # Normal colors
+  normal:
+    black:   '0x15161E'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x7dcfff'
+    white:   '0xa9b1d6'
+
+  # Bright colors
+  bright:
+    black:   '0x414868'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x7dcfff'
+    white:   '0xc0caf5'
+
+  indexed_colors:
+    - { index: 16, color: '0xff9e64' }
+    - { index: 17, color: '0xdb4b4b' }
+    
+
+#colors:
+#  primary:
+#    background: '#1c1c1c'
+#    foreground: '#afafd7'
+#  normal:
+#    black:   '#2e313d'
+#    red:     '#cf8164'
+#    green:   '#76a065'
+#    yellow:  '#ab924c'
+#    blue:    '#8296b0'
+#    magenta: '#a18daf'
+#    cyan:    '#659ea2'
+#    white:   '#b5b4c9'
+#  bright:
+#    black:   '#5b5f71'
+#    red:     '#fe9f7c'
+#    green:   '#92c47e'
+#    yellow:  '#d2b45f'
+#    blue:    '#a0b9d8'
+#    magenta: '#c6aed7'
+#    cyan:    '#7dc2c7'
+#    white:   '#f0ecfe'
+
+background_opacity: 0.95
 
 font:
   normal:
