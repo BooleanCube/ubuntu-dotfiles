@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "coc-discord-rpc": ">=5.0.5"
+  }
+}
