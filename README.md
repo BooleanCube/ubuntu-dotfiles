@@ -3,7 +3,7 @@ These are my dotfiles and configurations for applications I use.
 
 Refer back to my [old dotfiles](https://github.com/BooleanCube/old-dotfiles) for more cool stuff that I have customized
 
-I don't actually use i3 however, I do have my old i3-gaps config on here. I currently use a gnome extension window manager called material shell which works splendidly!
+I don't actually use i3 however, I do have my old i3-gaps config on here. I currently use a gnome extension tiling manager called pop shell which works splendidly! I used Material Shell WM before but I didn't have a nice experience with it because it was very buggy.
 
 ### Example:
 
