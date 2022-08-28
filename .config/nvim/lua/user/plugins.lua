@@ -69,6 +69,7 @@ return packer.startup(function(use)
   use "arzg/vim-substrata"
   use "ChristianChiarulli/nvcode-color-schemes.vim"
   use 'folke/tokyonight.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
